@@ -1,0 +1,485 @@
+
+/*
+Alkumääritykset
+===========================
+*/
+
+/*poistaa valmiit sisennykset*/
+* {
+	padding: 0;
+	margin: 0;
+	}
+
+body, html {
+	background: url('../kuvat/bg.gif');
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14pt;
+	z-index: -100;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	}
+
+p {
+	color: #aaa;
+	/*text-shadow: 1px 1px 0px #aaa;*/
+	font-size: 11pt;
+	margin: 15px 20px 30px 30px;
+	}
+	
+/*otsikot*/
+h1 { font-size: 32pt; color: #bbb; border: solid #bbb; border-width: 0 0 2px 2px; padding-left: 7px; margin: 10px 20px 30px 0; clear: both;}
+h2 { font-size: 20pt; color: #bbb; border: solid #bbb; border-width: 0 0 2px 2px; padding-left: 7px; margin: 10px 10px 20px 0;}
+h3 { font-size: 16pt; color: #bbb; border: solid #bbb; border-width: 0 0 0px 0; margin: 1em 1em 1em 0; }
+
+#portwrap h1, #galwrap h1 { display: inline-block; position: relative; margin: 10px auto 30px auto; padding-right: 10px; clear: both; float: none;}
+
+blockquote {
+	font-style: italic;
+	color: #555;
+	border: solid #111;
+	border-width: 0 0 0 10px;
+	margin: 10px 40px 10px 50px;
+	font-size: 16pt;
+	float:right;
+	}
+	
+a{
+	color: #ccc;
+	text-decoration: none;
+	}
+	
+a:hover{
+	color: #fff;
+	border: 1px 0 dotted;
+	}
+	
+otsikko {
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-size: 56pt;
+	font-weight: normal;
+	margin: 40px;
+	position: absolute;
+	display: block;
+	}
+	
+	
+/*
+Headerhommat
+===========================
+*/
+	
+#header{
+	background: none;
+	height: 200px;
+	margin: 0 auto;
+	width: 100%;
+	border-bottom: 1px solid #fff;
+	}
+	
+/*
+Navigaatio
+===========================
+*/	
+
+#navpos {
+	width:auto;
+	height: 30px;
+	position:absolute;
+	right:30px;
+	top: 202px;
+	/*border: 1px solid #fff;*/
+	}
+	
+	
+	#navbar{
+		padding: 0;
+		list-style: none;
+		margin: auto;
+		width: auto;
+		overflow: hidden;
+		position: relative;
+		}
+		
+		#navbar li{
+			float: left;
+			list-style:none;
+			width: 150px;
+			min-height: 30px;
+			text-align: center;
+			right: 0;
+			}
+
+			#navbar li a{
+				display: block;
+				/*background: #000;*/
+				padding-top: 7px 0;
+				position: relative;
+				right: 0;
+				height: 20px;
+				/*border: solid #bbb;
+				border-width: 0 1px;*/
+				}	
+
+			#navbar li ul{
+				display: none;
+				width: 100px;
+				}
+				
+			#navbar li:hover ul{
+				display: block;
+				position:static;
+				z-index: 10;
+				padding-top: 7px;
+				float:left;
+				
+				}
+				
+				#navbar li:hover li{
+					text-align: center;
+					width: 150px;
+					height: 30px;
+					list-style: none;
+					padding: 7px 0;
+					}
+				
+				#navbar li:hover li a {
+					/*background: #000;*/
+					padding: 7px;
+					}
+	
+/******************************
+Sisältö
+******************************/
+
+#wrapper {
+	min-height: 100%;
+	position: relative;
+	}
+
+#wrap {
+	width: 52.08333333333333%;
+	min-height: 50%;
+	background: none;
+	margin: 70px auto 4em auto;
+	/*border-radius: 15px;
+	box-shadow: 0 0 7px #000;
+	border: 2px dashed #333;*/
+	background: none;
+	padding: 40px 40px 4em 40px;
+	overflow: hidden;
+	position: relative;
+	}
+	
+	#content {
+		width: 70%;
+		overflow: hidden;
+		}
+		
+	#sidebar {
+		width: 30%;
+		min-height: 100%;
+		border: solid #777;
+		border-width: 0 0 0 1px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		clear: right;
+		}
+	
+		.icon {
+			width: 70px;
+			height: 70px;
+			margin: 10px 0 10px 20px;
+			float: left;
+			display: inline-block;
+			}
+			
+			.icon img { max-width: 100%; }
+
+			.devart { background: url('../kuvat/deviantart_bw.png') no-repeat; }
+			.flickr { background: url('../kuvat/Flickr.png') no-repeat; }
+	
+#footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 0;
+	width: 100%;
+	height: 4em;
+	text-align: center;
+	border: solid #777;
+	border-width: 1px 0 0 0;
+	}
+	
+	#footer p {
+		color: #aaa;
+		font-size: 10pt;
+		margin: 10px 30px 10px 30px;
+		}
+	
+
+/******************************
+Portfolio
+******************************/
+	
+#portwrap {
+	width: 60%;
+	height: 500px;
+	margin: 70px auto 4em auto;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	}
+	
+	#portcontent {
+		width: 80%;
+		margin: 30px auto;
+		position: relative;
+		overflow: visible;
+		/*border: solid 1px #000;*/
+		}
+		
+		#portcontent div img {
+			max-width: 100%;
+			}
+	
+.p_thumb {
+	position: absolute;
+	width: 33.333333333333333333333333333333333333%;
+	/*border: solid 1px #000;*/
+	}
+	
+	.t1 { left: 0; }
+	.t2 { left: 33.333333333333333333333333333333333333%; }
+	.t3 { left: 66.666666666666666666666666666666666666%; }
+
+/******************************
+Galleria
+******************************/
+
+#galwrap {
+	width: 60%;
+	min-height: 50%;
+	margin: 70px auto 5em auto;
+	overflow: hidden;
+	position: relative;
+	text-align: right;
+	padding-bottom: 4em;
+	}
+
+.thumbcont {
+	display: inline-block;
+	float: left;
+	position: relative;
+	margin: 20px;
+	width: 200px;
+	height: 200px;
+	border: solid 3px #000;
+	overflow: hidden;
+	}
+	
+	.thumbcont img {
+		max-width: 100%;
+		}
+		
+	.animspan {
+		-moz-transition:all .4s ease-out;
+		width: 100%;
+		height: 120px;
+		position: absolute;
+		top: -120px;
+		display: block;
+		background: rgb( 0, 0, 0 ); /*jos selain ei tue rgba:ta*/
+		background: rgba( 0, 0, 0, .7 );
+		color: #fff;
+		text-align: center;
+		}
+		
+		.animspan h3 {
+			margin: 10px 0 0 0;
+			padding: 0;
+			font-weight: bold;
+			font-size: 1em;
+			}
+		
+		.animspan p {
+			font-size: .9em;
+			padding: 1px;
+			margin: 0;
+			}
+		
+	.thumbcont:hover > .animspan { margin-top: 120px; }
+	
+		
+		
+/******************************
+Hakasulku
+******************************/
+
+.bracketwrap {
+	width: 80%;
+	height: auto;
+	position: relative;
+	margin: 2em auto 3em auto;
+	}
+	
+	.bracket_l {
+		border: solid #555;
+		border-width:  5px 0 5px 5px;
+		width: 20px;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: -5px;
+		z-index: 1;
+		}
+		
+		.r {
+			left: auto;
+			right: 0;
+			border-width:  5px 5px 5px 0px;
+			}
+		
+	.bracketwrap p {
+		padding: 10px 10px;
+		color: #aaa;
+		}	
+
+	
+/******************************
+Kulmatesti
+******************************/
+
+.corner {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	border: solid #bbb;
+	}
+	
+	.ul {top: 0; left: 0; border-width: 3px 0 0 3px;}
+	.ur {top: 0; right: 0; border-width: 3px 3px 0 0;}
+	.bl {bottom: 0; left: 0; border-width: 0 0 3px 3px;}
+	.br {bottom: 0; right: 0; border-width: 0 3px 3px 0;}
+	
+/******************************
+Mediaqueryt
+******************************/
+	
+@media screen and (max-width: 1280px) {
+
+	#wrap {
+		width: 80%;
+		}
+	
+	otsikko {
+		font-size: 40pt;
+		}
+		
+	#navbar li:hover li a {
+	background: #000;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+
+	#sidebar {
+		display: none;
+	}
+	
+	#navbar li:hover ul{
+		display: none;
+		}
+	
+	#content {
+		width: 100%;
+		overflow: hidden;
+		}
+		
+	#portcontent, #portwrap {
+		overflow: hidden;
+		width: 100%;
+		height: auto;
+		padding-bottom: 5em;
+		}
+		
+	.thumbcont {
+		width: 100px;
+		height: 100px;
+		}
+	
+	.animspan {
+		display: none;
+		}
+	
+	.thumbcont:hover > .animspan { margin-top: 0; }
+		
+	.p_thumb, .t1, .t2, .t3 {left: auto; margin: 20px; padding: 0; float: left; position: relative; width: 100%; overflow: hidden;}
+}
+	
+@media screen and (max-width: 480px) {
+
+	#wrap, #content, #portwrap, #portcontent, #galwrap {
+		width: 100%;
+		box-shadow: 0 0 0 0;
+		border: 0;
+		border-radius: 0;
+		padding: 0 0 4em 0;
+		margin-top: 20px;
+		position: relative;
+		overflow: hidden;
+		}
+		
+	#navbar li {
+		width: 110px;
+		font-size: 1.1em;
+		}
+	
+	#navbar li:hover ul{
+		display: none;
+		}
+	
+	#content p, h1, h2, h3 {
+		margin: 15px 30px;
+		}
+		
+	#sidebar {
+		display: none;
+		}
+		
+	#navpos {
+		position: relative;
+		width: 330px;
+		height:30px;
+		margin:0 auto;
+		float: none;
+		clear: both;
+		display: block;
+		top: 0;
+		left: 0;
+		}
+	
+	body, p {
+		font-size: 12pt;
+		}
+		
+}
+
+@media screen and (max-width: 330px) {
+
+	#navpos {
+		width: 285px;
+		}
+	
+	#navbar li {
+		width: auto;
+		font-size: 1.1em;
+		padding: 2px 10px;
+		}
+		
+
+}
